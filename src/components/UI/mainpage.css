@@ -103,9 +103,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px; /* Increased margin */
+  margin-bottom: 40px; 
   border-bottom: 1px solid #eee;
-  padding-bottom: 30px; /* Increased padding */
+  padding-bottom: 30px; 
 }
 
 header h1 {
@@ -154,17 +154,17 @@ header h1 {
 .task-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px; /* Increased gap */
-  margin-top: 30px; /* Increased margin */
+  gap: 30px; 
+  margin-top: 30px;
 }
 
 .task-column {
   background-color: #f9fafb;
-  padding: 30px; /* Increased padding */
-  border-radius: 12px; /* More rounded corners */
+  padding: 30px; 
+  border-radius: 12px; 
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, transform 0.2s ease-in-out;
-  min-height: 350px; /* Increased min-height */
+  min-height: 350px;
 }
 
 .task-column:hover {
@@ -173,9 +173,9 @@ header h1 {
 }
 
 .task-column h3 {
-  text-align: left; /* Aligned to the left */
-  margin-bottom: 25px; /* Increased margin */
-  font-size: 1.4rem; /* Slightly larger font */
+  text-align: left;
+  margin-bottom: 25px; 
+  font-size: 1.4rem; 
   font-weight: 600;
   color: #4a5568;
   text-transform: uppercase;
@@ -185,10 +185,10 @@ header h1 {
 
 .task {
   background-color: #fff;
-  padding: 20px; /* Increased padding */
-  border-radius: 10px; /* More rounded corners */
+  padding: 20px; 
+  border-radius: 10px; 
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-  margin-bottom: 20px; /* Increased margin */
+  margin-bottom: 20px; 
   position: relative;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -200,123 +200,44 @@ header h1 {
 
 .task-title {
   font-weight: 500;
-  margin-bottom: 10px; /* Increased margin */
+  margin-bottom: 10px; 
   color: #2d3748;
-  font-size: 1.1rem; /* Slightly larger font */
+  font-size: 1.1rem;
 }
 
 .task-priority {
-  font-size: 1rem; /* Slightly larger font */
+  font-size: 1rem; 
   color: #718096;
-  margin-bottom: 10px; /* Increased margin */
+  margin-bottom: 10px; 
 }
 
 .task-timestamp {
-  font-size: 0.9rem; /* Slightly larger font */
+  font-size: 0.9rem; 
   color: #a0aec0;
-  margin-bottom: 15px; /* Increased margin */
+  margin-bottom: 15px; 
 }
 
 .delete-task {
-  background-color: #e53e3e; /* Light red background for delete button */
+  background-color: #e53e3e; 
   color: white;
   border: none;
   padding: 8px 15px;
   border-radius: 8px;
   cursor: pointer;
-  position: absolute; /* Positioned relative to the task card */
-  top: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
+  position: absolute; 
+  top: 10px;
+  right: 10px;
 }
 .delete-task:hover {
   background-color: #d32f2f;
-  transform: scale(1.05); /* Slight scale on hover */
+  transform: scale(1.05); 
 }
 
 .empty-task {
   text-align: center;
   color: #a0aec0;
-  padding: 40px; /* Increased padding */
+  padding: 40px; 
   font-style: italic;
   font-size: 1.1rem;
 }
 
-/* Dark Mode Styles */
-.dark-mode body {
-  background: #121212;
-  color: #e0e0e0;
-}
-
-.dark-mode .sidebar {
-  background: linear-gradient(135deg, #1e1e1e, #181818);
-  color: #cfd8dc;
-}
-
-.dark-mode .main {
-  background: #242526; /* Darker background for main content */
-  color: #e0e0e0;
-}
-
-.dark-mode .task-column {
-  background: #2d2e2f; /* Darker background for task columns */
-}
-
-.dark-mode .task {
-  background: #3a3b3c; /* Darker background for tasks */
-  color: #e0e0e0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
-}
-
-.dark-mode .task:hover {
-  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3); /* Adjusted hover shadow */
-}
-
-.dark-mode .Add-task input {
-  background-color: #252525;
-  color: #e0e0e0;
-  border-color: #555;
-}
-
-.dark-mode .Add-task button {
-  background-color: #3498db; /* Different accent color in dark mode */
-}
-
-.dark-mode .Add-task button:hover {
-  background-color: #2980b9;
-}
-
-.dark-mode .delete-task {
-  background-color: #c0392b; /* Darker red for delete button */
-}
-
-.dark-mode .empty-task {
-  color: #999;
-}
-
-.dark-mode .sidebar-item {
-  color: #cfd8dc;
-}
-
-.dark-mode .sidebar-icon {
-  color: #e0e0e0;
-}
-
-.dark-mode header h1 {
-  color: #e0e0e0;
-}
-
-.dark-mode .task-column h3 {
-  color: #e0e0e0;
-}
-
-.dark-mode .task-title {
-  color: #e0e0e0;
-}
-
-.dark-mode .task-priority {
-  color: #a0aec0;
-}
-
-.dark-mode .task-timestamp {
-  color: #718096;
-}
