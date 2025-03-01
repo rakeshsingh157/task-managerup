@@ -43,7 +43,7 @@ const Collaboration = () => {
   return (
     <div className="taskBoard">
       <aside className="sidebar">
-        <h2 className="sidebar-title">MENU</h2>
+        <h2 className="sidebar-title">ƬƛƧҠƑԼƠƜ</h2>
         <ul className="sidebar-list">
           <li onClick={() => navigate("/mainpage")} className="sidebar-item">
             <FontAwesomeIcon icon={faListCheck} className="sidebar-icon" /> Task
