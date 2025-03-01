@@ -1,0 +1,229 @@
+/* calendar.css */
+html, body, #root, .calendar-page {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s; 
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #f0f8ff);
+    color: #37474f;
+    line-height: 1.7;
+}
+
+.calendar-page {
+    display: flex;
+}
+
+.sidebar {
+    width: 350px;
+    background: linear-gradient(135deg, #424242, #263238);
+    color: #eceff1;
+    padding: 60px 40px;
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-title {
+    margin-bottom: 60px;
+    font-size: 2.5em;
+    font-weight: 800;
+    text-align: center;
+    color: #cfd8dc;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.sidebar-item {
+    padding: 22px 35px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+    border-radius: 18px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.sidebar-item:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+
+.sidebar-item.active {
+    background: rgba(255, 255, 255, 0.35);
+    font-weight: 700;
+    color: #fff;
+}
+
+.sidebar-icon {
+    margin-right: 30px;
+    font-size: 1.6em;
+    color: #b0bec5;
+}
+
+.calendar-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 30px auto;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.calendar-nav-button {
+    background: linear-gradient(135deg, #5c6bc0, #3949ab);
+    color: white;
+    border: none;
+    padding: 18px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background 0.3s, transform 0.2s ease-in-out, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.calendar-nav-button:hover {
+    background: linear-gradient(135deg, #4a59b3, #2e3c92);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.calendar-title {
+    margin: 0;
+    font-size: 3em;
+    font-weight: 700;
+    color: #263238;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+}
+
+.grid.days div {
+    font-weight: 700;
+    font-size: 1.3em;
+    color: #424242;
+    text-align: center;
+    padding: 15px;
+}
+
+.day {
+    padding: 25px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    font-size: 1.3em;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.day-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+    margin: 0 auto;
+}
+
+.day-number span {
+    display: inline-block;
+    line-height: 1;
+}
+
+.day-number:hover {
+    background: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.day-header {
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: linear-gradient(135deg, #212121, #303030);
+    color: #e0e0e0;
+}
+
+.sidebar.dark-mode {
+    background: linear-gradient(135deg, #181818, #282828);
+    color: #b0bec5;
+}
+
+.sidebar-title.dark-mode {
+    color: #90a4ae;
+}
+
+.sidebar-icon.dark-mode {
+    color: #78909c;
+}
+
+.calendar-content.dark-mode {
+    background: #37474f;
+}
+
+.container.dark-mode {
+    background: #424242;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+.calendar-title.dark-mode {
+    color: #cfd8dc;
+}
+
+.grid.days div.dark-mode,
+.day.dark-mode,
+.day-number.dark-mode,
+.day-header.dark-mode {
+    color: #e0e0e0;
+}
+
+.day.dark-mode {
+    border: 2px solid #555;
+    background-color: #333;
+}
+
+.day-number.dark-mode {
+    background: #444; 
+}

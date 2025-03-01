@@ -1,0 +1,322 @@
+/* mainpage.css (Enhanced for Attractiveness) */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #e0f2f7, #f0f8ff); /* Soft gradient background */
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+.taskBoard {
+  display: flex;
+  height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 280px;
+  background: linear-gradient(135deg, #34495e, #2c3e50); /* Darker sidebar gradient */
+  color: #ecf0f1;
+  padding: 40px 30px;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar-title {
+  margin-bottom: 40px;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  color: #fff; /* White title color */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.sidebar-item {
+  padding: 18px 25px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s ease-in-out, color 0.3s;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 1.15em;
+  font-weight: 600;
+  color: #abb2b9; /* Default color for sidebar items */
+}
+
+.sidebar-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.04);
+  color: #ffffff; /* White text on hover */
+}
+
+.sidebar-item.active {
+  color: #ffffff; /* White text for active item */
+  background: rgba(255, 255, 255, 0.15); /* Subtle background for active item */
+}
+
+.sidebar-icon {
+  margin-right: 20px;
+  font-size: 1.4em;
+  transition: color 0.3s;
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.6em;
+  color: #abb2b9;
+  align-self: flex-start; /* Align to the left */
+  margin-bottom: 20px; /* Add space below */
+  transition: color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+  color: #ffffff; /* White on hover */
+}
+
+/* Main Content (Dashboard) Styling */
+.main {
+  flex: 1;
+  padding: 40px; /* Increased padding */
+  background-color: #fff;
+  overflow-y: auto;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px; /* Increased margin */
+  border-bottom: 1px solid #eee;
+  padding-bottom: 30px; /* Increased padding */
+}
+
+header h1 {
+  font-size: 2.2rem; 
+  font-weight: 600;
+  color: #37474f;
+  transition: color 0.3s;
+}
+
+.Add-task {
+  display: flex;
+  align-items: center;
+}
+
+.Add-task input {
+  padding: 12px 18px; 
+  border: 1px solid #ddd;
+  border-radius: 8px; 
+  margin-right: 15px; 
+  font-size: 1.05rem; 
+  transition: border-color 0.3s ease, background-color 0.3s, color 0.3s;
+}
+
+.Add-task input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.Add-task button {
+  padding: 12px 25px; 
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.05rem; 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.Add-task button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.task-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px; /* Increased gap */
+  margin-top: 30px; /* Increased margin */
+}
+
+.task-column {
+  background-color: #f9fafb;
+  padding: 30px; /* Increased padding */
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  min-height: 350px; /* Increased min-height */
+}
+
+.task-column:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.task-column h3 {
+  text-align: left; /* Aligned to the left */
+  margin-bottom: 25px; /* Increased margin */
+  font-size: 1.4rem; /* Slightly larger font */
+  font-weight: 600;
+  color: #4a5568;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.task {
+  background-color: #fff;
+  padding: 20px; /* Increased padding */
+  border-radius: 10px; /* More rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px; /* Increased margin */
+  position: relative;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.task:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.task-title {
+  font-weight: 500;
+  margin-bottom: 10px; /* Increased margin */
+  color: #2d3748;
+  font-size: 1.1rem; /* Slightly larger font */
+}
+
+.task-priority {
+  font-size: 1rem; /* Slightly larger font */
+  color: #718096;
+  margin-bottom: 10px; /* Increased margin */
+}
+
+.task-timestamp {
+  font-size: 0.9rem; /* Slightly larger font */
+  color: #a0aec0;
+  margin-bottom: 15px; /* Increased margin */
+}
+
+.delete-task {
+  background-color: #e53e3e; /* Light red background for delete button */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  position: absolute; /* Positioned relative to the task card */
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+}
+.delete-task:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05); /* Slight scale on hover */
+}
+
+.empty-task {
+  text-align: center;
+  color: #a0aec0;
+  padding: 40px; /* Increased padding */
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Dark Mode Styles */
+.dark-mode body {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .sidebar {
+  background: linear-gradient(135deg, #1e1e1e, #181818);
+  color: #cfd8dc;
+}
+
+.dark-mode .main {
+  background: #242526; /* Darker background for main content */
+  color: #e0e0e0;
+}
+
+.dark-mode .task-column {
+  background: #2d2e2f; /* Darker background for task columns */
+}
+
+.dark-mode .task {
+  background: #3a3b3c; /* Darker background for tasks */
+  color: #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
+}
+
+.dark-mode .task:hover {
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3); /* Adjusted hover shadow */
+}
+
+.dark-mode .Add-task input {
+  background-color: #252525;
+  color: #e0e0e0;
+  border-color: #555;
+}
+
+.dark-mode .Add-task button {
+  background-color: #3498db; /* Different accent color in dark mode */
+}
+
+.dark-mode .Add-task button:hover {
+  background-color: #2980b9;
+}
+
+.dark-mode .delete-task {
+  background-color: #c0392b; /* Darker red for delete button */
+}
+
+.dark-mode .empty-task {
+  color: #999;
+}
+
+.dark-mode .sidebar-item {
+  color: #cfd8dc;
+}
+
+.dark-mode .sidebar-icon {
+  color: #e0e0e0;
+}
+
+.dark-mode header h1 {
+  color: #e0e0e0;
+}
+
+.dark-mode .task-column h3 {
+  color: #e0e0e0;
+}
+
+.dark-mode .task-title {
+  color: #e0e0e0;
+}
+
+.dark-mode .task-priority {
+  color: #a0aec0;
+}
+
+.dark-mode .task-timestamp {
+  color: #718096;
+}
